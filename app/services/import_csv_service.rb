@@ -1,3 +1,4 @@
+require 'csv'
 class ImportCSVService
   attr_reader :file
 
