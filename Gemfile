@@ -44,10 +44,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec'
   gem 'rspec-rails'
-end
-
-group :test do
-	gem 'capybara'
+  # Automating a browser to test the application's features
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :development do
