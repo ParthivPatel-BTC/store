@@ -1,0 +1,7 @@
+<h1> <%= @category.title %> </h1>
+<% @products.each do |product| %>
+  <div> <%= link_to product.name, product_details_path(product.id)%> </div> 
+<% end%>
+<br>
+<br>
+<%= paginate @products %>
