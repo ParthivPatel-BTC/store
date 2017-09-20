@@ -1,5 +1,0 @@
-<h1>Category list</h1>
-
-<% @categories.each do |category| %>
-  <div><%= link_to category.title, categorized_products_path(category.id) %></div>
-<% end%>
