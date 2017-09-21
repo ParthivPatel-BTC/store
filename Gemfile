@@ -32,11 +32,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Authentication and Authorization
-gem 'devise'
-
 # For Pagination
 gem 'kaminari'
+# To Manage environment specific settings in an easy and usable manner.
+gem 'config'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,5 +58,6 @@ group :development do
   # Shows the routes available in the application
   # https://github.com/schneems/sextant
   gem 'sextant', '~> 0.2.4'
-end
 
+  gem 'rubocop'
+end

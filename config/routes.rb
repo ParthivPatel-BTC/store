@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/start' => 'imports#start'
-  post '/import_csv' => 'imports#import_csv'
-  
+  match '/import_csv', to: 'imports#import_csv', via: [:get, :post]
+
   resources :categories, only: :index do
     resources :products, only: [:index, :show] do
     end

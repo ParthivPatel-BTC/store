@@ -1,6 +1,17 @@
-<%= flash[:notice] %>
+<h1>Import By Selecting CSV</h1>
+
+<% [:notice, :error].each do |key| %>
+  <% if flash[key] %>
+    <div><%= flash[key] %></div>
+  <% end %>
+<% end %>
 <%= form_tag import_csv_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Trigger Import" %>
-<% end %>
+<% end %><br>
 
+<h2>OR</h2>
+<h1>Import Remote CSV</h1>
+https://f.dynamiccreative.com/devtest/test.csv
+</br></br>
+<%= link_to "Import Remote CSV", import_csv_path(via_remote: true) %>
