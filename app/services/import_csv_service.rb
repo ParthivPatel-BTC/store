@@ -6,10 +6,10 @@ class ImportCSVService
     @file = file
   end
 
-  # Read CSV file and import records in the database. 
+  # Parse the CSV file and save records in the database.
   # Here we expect that user will select only CSV file.
   def import
-    csv = CSV.parse(file, :headers => true)
+    csv = CSV.parse(file, headers: true)
     ActiveRecord::Base.transaction do
       csv.each do |product|
         begin
